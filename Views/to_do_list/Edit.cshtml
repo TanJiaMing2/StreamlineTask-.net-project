@@ -1,0 +1,50 @@
+﻿@model StreamlineTask.Models.to_do_list
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 style="text-align: center;">Edit</h1>
+
+<hr />
+
+<div class="col-md-4" style="margin: 0 auto; text-align: center;">
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="id" />
+        <div class="form-group">
+            <label asp-for="Task" class="control-label"></label>
+            <input asp-for="Task" class="form-control" />
+            <span asp-validation-for="Task" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label"></label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Date" class="control-label"></label>
+            <input asp-for="Date" class="form-control" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Duration" class="control-label"></label>
+            <input asp-for="Duration" class="form-control" />
+            <span asp-validation-for="Duration" class="text-danger"></span>
+        </div>
+        <div>
+            <td colspan="2" style="text-align: right;">
+                <a asp-action="Index" class="btn btn-primary" style="background-color: red; color: #E7DFDD;"><img src="~/css/no.png" height="20px" width="20px" /></a>
+                <button type="submit" class="btn btn-primary" value="Save">
+                    <img src="~/css/yes.png" height="20px" width="20px ">
+                </button>
+            </td>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

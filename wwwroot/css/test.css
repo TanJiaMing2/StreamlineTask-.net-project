@@ -1,0 +1,35 @@
+﻿.table1 {
+    background: #0E0B16;
+    border-radius: 0.25em;
+    border-collapse: collapse;
+    margin: 1em;
+    width:110%; height:100%;
+
+
+th {
+    border-bottom: 1px solid #364043;
+    color: #E7DFDD;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    text-align: left;
+}
+
+td {
+    color: #fff;
+    font-weight: 400;
+    padding: 0.65em 1em;
+}
+
+.disabled td {
+    color: #4F5F64;
+}
+
+tbody tr {
+    transition: background 0.25s ease;
+}
+
+    tbody tr:hover {
+        background: #4717F6;
+    }
+    }

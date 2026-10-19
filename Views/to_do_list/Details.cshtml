@@ -1,0 +1,55 @@
+﻿@model StreamlineTask.Models.to_do_list
+
+@{
+    ViewData["Title"] = "Details";
+}
+<link rel="stylesheet" href="~/css/button2.css" />
+
+<h1>Task</h1>
+
+<div>
+    <hr />
+    <dl class="row" align="center">
+        <div class="detail-row" align="center">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Task)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Task)
+            </dd>
+        </div>
+
+        <div class="detail-row" align="center">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+        </div>
+
+        <div class="detail-row" align="center">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+        </div>
+
+        <div class="detail-row" align="center">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Duration)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Duration)
+            </dd>
+        </div>
+    </dl>
+</div>
+<div align="center">
+
+    <a class="btn btn-primary adjust" asp-action="Index">Back to List</a> |
+    <a class="btn btn-primary adjust" asp-action="Edit" asp-route-id="@Model?.id">Edit</a>
+
+</div>

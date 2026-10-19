@@ -1,0 +1,41 @@
+﻿.button1 {
+    position: relative;
+    z-index: 1;
+    background: #E7DFDD;
+    border: 3px solid;
+    border-color: var(--purple-400);
+    border-radius: 0.75rem;
+    color: #4717F6;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    transition: 250ms ease-in-out;
+    transition-property: all;
+}
+
+.button:hover,
+.button:focus {
+    color: #A239CA;
+    background-color: #A239CA;
+    transform: scale(1.1);
+}
+
+.text {
+    filter: drop-shadow(0 0 1px currentcolor);
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.6;
+    border-radius: inherit;
+    box-shadow: 0 0 1em 0.5em var(--purple-300);
+    transition: 250ms ease-in-out;
+    transition-property: opacity;
+}
+
+.button:hover::after,
+.button:focus::after {
+    opacity: 0.6;
+}
